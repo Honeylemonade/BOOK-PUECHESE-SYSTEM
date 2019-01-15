@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1300</width>
+    <height>672</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1300</width>
+    <height>672</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1300</width>
+    <height>672</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>7</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>图书购买系统 by 许颜鹏</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1281</width>
+     <height>651</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>锐字云字库小标宋体GBK</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tabSK">
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <attribute name="title">
+     <string>书库</string>
+    </attribute>
+    <widget class="QPushButton" name="SKdeleteIndex">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>530</y>
+       <width>201</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>批量删除指定书号</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SKAddOneBook">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>550</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>添加图书</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SKAddBooks">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>550</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>批量添加</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>654</x>
+       <y>15</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>请输入图书号进行查询：</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="SKcomboBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>200</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>默认顺序</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>按照书号排序</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>按照价格排序</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>按照入库时间排序</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="SKlineEdit">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>12</y>
+       <width>121</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="SKtableWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>1231</width>
+       <height>461</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SKsort">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>10</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>排序</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SKSearch">
+     <property name="geometry">
+      <rect>
+       <x>1020</x>
+       <y>12</y>
+       <width>76</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>查找</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SKdeleteIndex_2">
+     <property name="geometry">
+      <rect>
+       <x>820</x>
+       <y>574</y>
+       <width>241</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>批量删除指定日期书目</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="SKDI_ln">
+     <property name="geometry">
+      <rect>
+       <x>1070</x>
+       <y>530</y>
+       <width>141</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="SKDD_ln">
+     <property name="geometry">
+      <rect>
+       <x>1070</x>
+       <y>574</y>
+       <width>141</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SKAddToGWC">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>550</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>加入购物车</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SKAddToSCJ">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>550</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>加入收藏夹</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>30</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabSCJ">
+    <attribute name="title">
+     <string>收藏夹</string>
+    </attribute>
+    <widget class="QTableWidget" name="SCJtableWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>1231</width>
+       <height>461</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="SCJlineEdit">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>12</y>
+       <width>121</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SCJsort">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>10</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>排序</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>654</x>
+       <y>15</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>请输入图书号进行查询：</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="SCJcomboBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>200</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>默认顺序</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>按照书号排序</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>按照价格排序</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>按照入库时间排序</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="SCJSearch">
+     <property name="geometry">
+      <rect>
+       <x>1020</x>
+       <y>12</y>
+       <width>76</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>查找</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DFromSCJ">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>550</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>移出收藏夹</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SCJAddToGWC">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>550</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>加入购物车</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabGWC">
+    <attribute name="title">
+     <string>购物车</string>
+    </attribute>
+    <widget class="QPushButton" name="GWCROMtoSCJ">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>550</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>移至收藏夹</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="GWClineEdit">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>12</y>
+       <width>121</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DFromGWC">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>550</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>移出购物车</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="GWCSearch">
+     <property name="geometry">
+      <rect>
+       <x>1020</x>
+       <y>12</y>
+       <width>76</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>查找</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>654</x>
+       <y>15</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>请输入图书号进行查询：</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="GWCtableWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>1231</width>
+       <height>461</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>560</y>
+       <width>151</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>价格共计:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="priceLB">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>560</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>28</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text">
+      <string>234</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="GWCInNum_btn">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>550</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>增加数量</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="GWCDeNum_btn">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>550</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>减少数量</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>1100</x>
+       <y>560</y>
+       <width>151</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>锐字云字库小标宋体GBK</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>元</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>10</y>
+     <width>301</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Copyright © 1998 - 2019 许颜鹏</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
